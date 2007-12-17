@@ -15,7 +15,6 @@ Requires:	strace
 Requires:	rpm-build
 Requires:	diffutils
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The rpm-rebuilder package contains a set of tools written in bourne
