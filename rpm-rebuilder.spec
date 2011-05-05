@@ -1,6 +1,6 @@
 %define name	rpm-rebuilder
 %define version	0.28
-%define release %mkrel 5
+%define release %mkrel 6
 
 Name:		%{name}
 Version:	%{version}
