@@ -1,21 +1,17 @@
-%define name	rpm-rebuilder
-%define version	0.28
-%define release %mkrel 6
-
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 Summary:	Tools to build/check distributions
-URL:		http://www.mandrivalinux.com/
-Source0:	%{name}-%{version}.tar.bz2
+Name:		rpm-rebuilder
+Version:	0.28
+Release:	7
 License:	GPL
 Group:		System/Configuration/Packaging
+URL:		http://www.mandrivalinux.com/
+Source0:	%{name}-%{version}.tar.bz2
+Patch0:		rpm-rebuilder-svn_fixes.diff
 Requires:	rpmlint
 Requires:	strace
 Requires:	rpm-build
 Requires:	diffutils
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The rpm-rebuilder package contains a set of tools written in bourne
@@ -32,21 +28,18 @@ compute-compile-order: from the sets of binary and sources rpms, find the order
 in which the source rpms must be recompiled.
 
 %prep
+
 %setup -q
+%patch0 -p1
 
 %build
 
 %install
-rm -rf %{buildroot}
+
 make install
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc AUTHORS README README.CVS ChangeLog
-%_bindir/*
-%_sbindir/*
-%_datadir/rpm-rebuilder
-
+%{_bindir}/*
+%{_sbindir}/*
+%{_datadir}/rpm-rebuilder
