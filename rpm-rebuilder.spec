@@ -1,6 +1,6 @@
 %define name	rpm-rebuilder
 %define version	0.28
-%define release 16
+%define release 17
 
 Name:		%{name}
 Version:	%{version}
@@ -143,7 +143,7 @@ and test ( buchan request ) (Michael Scherer)
  explicitely mounting them in the service.
 
 - rpmbuildupdate (Michael Scherer):
-	* new sourceforge mirror, thanks to Götz Waschk
+	* new sourceforge mirror, thanks to GÃ¶tz Waschk
 	* fix %%mkrel still being incremented when a new
 	  version is build.
 	* fix cvs Id expansion
