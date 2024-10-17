@@ -6,7 +6,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:	Tools to build/check distributions
-URL:		http://www.mandrivalinux.com/
+URL:		https://www.mandrivalinux.com/
 Source0:	%{name}-%{version}.tar.bz2
 License:	GPL
 Group:		System/Configuration/Packaging
